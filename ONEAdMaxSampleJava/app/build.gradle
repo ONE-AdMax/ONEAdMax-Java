@@ -1,0 +1,54 @@
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+    namespace 'com.oneadmax.global.sample.java'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.oneadmax.global.sample.java"
+        minSdk 24
+        targetSdk 32
+
+        versionCode 1
+        versionName "0.9.7"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures{
+        viewBinding true
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            DateFormat df = new SimpleDateFormat( "yyMMdd_HHmmss" );
+            def buildDate = df.format( new Date() );
+            outputFileName = "${rootProject.name}_v${defaultConfig.versionName}_${variant.buildType.name}_${buildDate}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.oneadmax.sdk:sdk-ads:0.9.7'
+}
