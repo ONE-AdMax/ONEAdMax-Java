@@ -50,5 +50,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'com.oneadmax.sdk:sdk-ads:0.9.7'
+    implementation 'com.oneadmax.sdk:sdk-ads:0.9.8'
 }
