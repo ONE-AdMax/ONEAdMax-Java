@@ -29,7 +29,7 @@ dependencies {
     implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
 
     // Compatible in-app libraries on the ONEstore are listed below.
-    // implementation 'com.onestorecorp.sdk:sdk-iap:21:00.02'
+    // implementation 'com.onestorecorp.sdk:sdk-iap:21.00.02'
     // implementation 'com.onestorecorp.sdk:sdk-licensing:2.0.0'
 }
 ```
@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.oneadmax.sdk:sdk-ads:1.1.0'
 
     // Compatible in-app libraries on the ONEstore are listed below.
-    // implementation 'com.onestorecorp.sdk:sdk-iap:21:01.00'
+    // implementation 'com.onestorecorp.sdk:sdk-iap:21.01.00'
     // implementation 'com.onestorecorp.sdk:sdk-licensing:2.1.1'
 }
 ```
