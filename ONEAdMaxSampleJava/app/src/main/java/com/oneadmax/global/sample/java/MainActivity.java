@@ -1,62 +1,76 @@
 package com.oneadmax.global.sample.java;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.oneadmax.global.ONEAdMax;
-import com.oneadmax.global.listener.IOAMInitListener;
-import com.oneadmax.global.sample.java.databinding.ActivityMainBinding;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.lifecycle.ViewModelProvider;
 
-public class MainActivity extends BaseActivity implements IOAMInitListener {
-    private ActivityMainBinding binding;
+import com.oneadmax.global.sample.java.common.Stopwatch;
+import com.oneadmax.global.sample.java.common.Utils;
+import com.oneadmax.global.sample.java.common.base.MenuActivity;
+import com.oneadmax.global.sample.java.common.base.MenuItem;
 
-    //----------------------------------------------------------------------------------------------
+import java.util.List;
+
+public class MainActivity extends MenuActivity {
+
+    private AlertDialog progressDialog;
+    private MainViewModel viewModel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
-        initUi();
-        initONEAdMax();
-    }
+        initActionBarSubTitle();
+        showProgressDialog();
+        binding.recyclerView.setVisibility(View.GONE);
 
-    protected void initUi() {
-        binding.btnBanner.setOnClickListener(view -> {
-            showActivity(BannerActivity.class);
-        });
-
-        binding.btnInterstitial.setOnClickListener(view -> {
-            showActivity(InterstitialActivity.class);
-        });
-
-        binding.btnInterstitialVideo.setOnClickListener(view -> {
-            showActivity(InterstitialVideoActivity.class);
-        });
-
-        binding.btnRewardVideo.setOnClickListener(view -> {
-            showActivity(RewardVideoActivity.class);
+        final Stopwatch stopwatch = Stopwatch.createStarted();
+        viewModel.initialize(getApplicationContext(), () -> {
+            dismissProgressDialog();
+            stopwatch.stop();
+            String message = "Initialization is complete.\n(" + stopwatch + " ms)";
+            Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+            binding.recyclerView.setVisibility(View.VISIBLE);
         });
     }
 
-
-    private void initONEAdMax() {
-        showProgressBar();
-
-        if (BuildConfig.DEBUG)
-            ONEAdMax.setLogEnable(true);
-
-        ONEAdMax.init(this, this);
+    private void initActionBarSubTitle() {
+        ActionBar actionBar = getSupportActionBar();
     }
 
+    @Nullable
     @Override
-    public void onInitialized() {
-        hideProgressBar();
-        showToast("ONEAdMax SDK Init Completed.");
+    public List<MenuItem> onCreateMenuItems() {
+        if (viewModel == null) {
+            viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        }
+        return viewModel.fetchItems();
     }
 
-    public void onDestroy() {
-        super.onDestroy();
-        ONEAdMax.unInit();
+    @SuppressLint("SetTextI18n")
+    private void showProgressDialog() {
+        if (progressDialog == null) {
+            View view = getLayoutInflater().inflate(R.layout.progress_dialog, null, false);
+            ((TextView) view.findViewById(R.id.text)).setText("Initializing...");
+            progressDialog = new AlertDialog.Builder(this)
+                    .setView(view)
+                    .setCancelable(false)
+                    .create();
+        }
+        progressDialog.show();
+    }
+
+    private void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+            progressDialog = null;
+        }
     }
 }

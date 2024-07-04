@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.ONEAdMaxSDKSample" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -11,19 +11,25 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-
+        <item name="android:textColorPrimary">#6B6B6B</item>
         <!-- Customize your theme here. -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="Theme.ONEAdMaxSDKSample.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="AppTextAppearance.Title" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textStyle">bold|italic</item>
     </style>
 
-    <style name="Theme.ONEAdMaxSDKSample.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTextAppearance.Title.Background" parent="AppTextAppearance.Title">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@color/teal_700</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
-    <style name="Theme.ONEAdMaxSDKSample.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

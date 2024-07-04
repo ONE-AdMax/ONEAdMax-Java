@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    package="com.oneadmax.global.sample.java">
+    <queries>
+        <intent>
+            <action android:name="com.onestore.iaa.intent.action.REWARD" />
+        </intent>
+    </queries>
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:launchMode="singleTask"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ONEAdMaxSDKSample"
-        tools:targetApi="31">
-        <activity
-            android:name=".RewardVideoActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ONEAdMaxSDKSample.NoActionBar" />
-        <activity
-            android:name=".InterstitialVideoActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ONEAdMaxSDKSample.NoActionBar" />
-        <activity
-            android:name=".InterstitialActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ONEAdMaxSDKSample.NoActionBar" />
-        <activity
-            android:name=".BannerActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ONEAdMaxSDKSample.NoActionBar" />
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -37,8 +21,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".pure.BannerActivity"/>
+        <activity android:name=".pure.NativeAdActivity"/>
+        <activity android:name=".common.feature.AdContentActivity"/>
+
+        <!-- ONEAdMax app key -->
         <meta-data android:name="com.oneadmax.global.appkey" android:value="938555472" />
+        <!-- AppLogin sdk key -->
+        <meta-data android:name="applovin.sdk.key" android:value="@string/applovin_sdk_key"  />
     </application>
 
 </manifest>
-
