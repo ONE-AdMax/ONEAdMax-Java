@@ -1,5 +1,4 @@
-import java.text.DateFormat
-import java.text.SimpleDateFormat
+
 
 plugins {
     id 'com.android.application'
@@ -8,15 +7,15 @@ plugins {
 
 android {
     namespace 'com.oneadmax.global.sample.java'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.oneadmax.global.sample.java"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
 
         versionCode 1
-        versionName "0.9.7"
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -32,23 +31,63 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding true
-    }
-
-    applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            DateFormat df = new SimpleDateFormat( "yyMMdd_HHmmss" );
-            def buildDate = df.format( new Date() );
-            outputFileName = "${rootProject.name}_v${defaultConfig.versionName}_${variant.buildType.name}_${buildDate}.apk"
-        }
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.0.0'
+    implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
 
-    implementation 'com.oneadmax.sdk:sdk-ads:0.9.8'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+
+    // mediation sample
+    // Only compatible with that version.
+
+    // Native AD supports only adfit, applovin, and mobon.
+
+    // AdFit
+//    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10'
+//    api 'com.kakao.adfit:ads-base:3.13.6'
+
+    // AppLovin
+//    api 'com.applovin:applovin-sdk:12.1.0'
+
+    // Cauly
+//    api 'com.google.android.gms:play-services-appset:16.0.0'
+//    api 'com.fsn.cauly:cauly-sdk:3.5.26'
+
+    // Mobon
+//    api('io.github.mobon:mobonSDK:1.0.0.54') {
+//        transitive = true
+//    }
+
+    // UnityAds
+//    api 'com.unity3d.ads:unity-ads:4.7.0'
+
+
+    // MezzoMedia. adMan.jar v200
+//    implementation files('libs/adMan_211115.jar')
+
+    // Vungle( https://github.com/Vungle/Android-SDK/tree/6.11.0/app/libs )
+    // AAR Integration
+//    api 'com.vungle:publisher-sdk-android:6.11.0'
+    api 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+
 }

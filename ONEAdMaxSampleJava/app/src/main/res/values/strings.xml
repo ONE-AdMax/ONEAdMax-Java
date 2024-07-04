@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ONEAdMax Java Sample</string>
+    <string name="app_name">ONEAdMax Sample</string>
+    <string name="applovin_sdk_key">Your AppLovin Key</string>
+
 </resources>

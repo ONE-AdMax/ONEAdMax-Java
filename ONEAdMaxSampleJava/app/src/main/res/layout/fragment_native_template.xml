@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 1" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 2" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 3" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 4" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 5" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 6" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="template 7" />
+
+        <com.oneadmax.global.OAMNative
+            android:id="@+id/OAMNative7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

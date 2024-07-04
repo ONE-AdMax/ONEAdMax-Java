@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pure.BannerActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="HardcodedText">
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BANNER_320x50" />
+
+        <com.oneadmax.global.OAMBanner
+            android:id="@+id/banner_320x50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BANNER_320X100" />
+
+        <com.oneadmax.global.OAMBanner
+            android:id="@+id/banner_320x100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/AppTextAppearance.Title.Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BANNER_300x250" />
+
+        <com.oneadmax.global.OAMBanner
+            android:id="@+id/banner_300x250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
