@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.0.0'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.0.1'
     implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'

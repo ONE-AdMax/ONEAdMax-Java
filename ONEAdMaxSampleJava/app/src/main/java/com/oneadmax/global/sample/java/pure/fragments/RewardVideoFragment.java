@@ -131,12 +131,10 @@ public class RewardVideoFragment extends BaseFragment<FragmentFullScreenContentB
      *  Called When user completed the video
      * @param adNetworkNo
      * @param completed  true: ad completed, false: ad canceled
-     * @param bidId bidId
-     * @param enablePostback reward target
      */
     @Override
-    public void onCompleted(int adNetworkNo, boolean completed, String bidId, boolean enablePostback) {
-        addMethodName("adNetworkNo: " + adNetworkNo + ", completed: " + completed + ", bidId: " + bidId + ", enablePostback: " + enablePostback);
+    public void onCompleted(int adNetworkNo, boolean completed) {
+        addMethodName("adNetworkNo: " + adNetworkNo + ", completed: " + completed);
 
     }
 
