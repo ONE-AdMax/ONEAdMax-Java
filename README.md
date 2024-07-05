@@ -25,7 +25,7 @@ Please check the exact version information of the **In-App SDK** or **App Licens
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.0.0'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.0.1'
     implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
 
     // Compatible in-app libraries on the ONEstore are listed below.
@@ -36,7 +36,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.1.0'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.1.1'
 
     // Compatible in-app libraries on the ONEstore are listed below.
     // implementation 'com.onestorecorp.sdk:sdk-iap:21.01.00'
@@ -63,6 +63,8 @@ Need to add `<queries>` to your `Androidmanifest.xml` file.
 Refer to the[[SDK guide]](http://https://one-admax-organization.gitbook.io/one-admax-sdk/oamsdk)for more information
 
 ## Change Note
+* 2024-07-05
+	* fixed bug. 
 * 2024-07-04
 	* Added the marketing system. 
 * 2024-03-27
