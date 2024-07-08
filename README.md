@@ -60,7 +60,7 @@ Need to add `<queries>` to your `Androidmanifest.xml` file.
 
 ```
 
-Refer to the[[SDK guide]](http://https://one-admax-organization.gitbook.io/one-admax-sdk/oamsdk)for more information
+Refer to the[[SDK guide]](http://one-admax-organization.gitbook.io/one-admax-sdk/oamsdk)for more information
 
 ## Change Note
 * 2024-07-05
