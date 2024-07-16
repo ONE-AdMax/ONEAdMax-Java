@@ -1,8 +1,8 @@
-# ONEAdMax SDK 1.1.0
+# ONEAdMax SDK 1.0.1
 
 ## Overview
 
-ONE Store AdMax SDK 1.1.0 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
+ONE Store AdMax SDK 1.0.1 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
 
 
 ## ONEAdMax SDK
@@ -19,13 +19,13 @@ repositories {
 
 Add Maven dependencies to the Module-level gradle.
 
-We are releasing two versions, 1.0.0 and 1.1.0, due to changes in the way we find connection points to the store service.<br/>
+We are releasing two versions, 1.0.1 and 1.1.1, due to changes in the way we find connection points to the store service.<br/>
 Android OS support and bug fixes will be available in 1.1.0 and later, so please use the latest version whenever possible.
 Please check the exact version information of the **In-App SDK** or **App Licensing Checker SDK** and install the version of the **ONE AdMax SDK that is compatible with each.**
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.0.0'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.0.1'
     implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
 
     // Compatible in-app libraries on the ONEstore are listed below.
@@ -36,7 +36,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.1.0'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.1.1'
 
     // Compatible in-app libraries on the ONEstore are listed below.
     // implementation 'com.onestorecorp.sdk:sdk-iap:21.01.00'
