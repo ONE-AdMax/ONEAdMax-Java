@@ -1,8 +1,8 @@
-# ONEAdMax SDK 1.0.2
+# ONEAdMax SDK 1.1.2
 
 ## Overview
 
-ONE Store AdMax SDK 1.0.2 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
+ONE Store AdMax SDK 1.1.2 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
 
 
 ## ONEAdMax SDK
