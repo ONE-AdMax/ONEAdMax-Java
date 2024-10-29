@@ -18,8 +18,10 @@ repositories {
 ```
 
 Then, add Maven dependencies to the Module-level gradle.
-Android OS support and bug fixes will be available in 1.1.0 and later, so please use the latest version whenever possible.
-Please check the exact version information of the **In-App SDK** or **App Licensing Checker SDK** and install the version of the **ONE AdMax SDK that is compatible with each.**
+
+Please make sure to use the latest version, 1.2.0, to ensure compatibility with Android OS support and bug fixes.
+
+Verify the exact version of the **In-App SDK** or **App Licensing Checker SDK** to install the compatible version of the **ONE AdMax SDK**.
 
 ```groovy
 dependencies {
