@@ -17,22 +17,9 @@ repositories {
 }
 ```
 
-Add Maven dependencies to the Module-level gradle.
-
-We are releasing two versions, 1.0.2 and 1.2.0, due to changes in the way we find connection points to the store service.<br/>
+Then, add Maven dependencies to the Module-level gradle.
 Android OS support and bug fixes will be available in 1.1.0 and later, so please use the latest version whenever possible.
 Please check the exact version information of the **In-App SDK** or **App Licensing Checker SDK** and install the version of the **ONE AdMax SDK that is compatible with each.**
-
-```groovy
-dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.0.2'
-    implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
-
-    // Compatible in-app libraries on the ONEstore are listed below.
-    // implementation 'com.onestorecorp.sdk:sdk-iap:21.00.02'
-    // implementation 'com.onestorecorp.sdk:sdk-licensing:2.0.0'
-}
-```
 
 ```groovy
 dependencies {
