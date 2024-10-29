@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.1.2'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -59,34 +59,34 @@ dependencies {
     // mediation sample
     // Only compatible with that version.
 
-    // Native AD supports only adfit, applovin, and mobon.
+    // Native AD supports only applovin, and mobon.
 
     // AdFit
 //    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10'
 //    api 'com.kakao.adfit:ads-base:3.13.6'
 
     // AppLovin
-//    api 'com.applovin:applovin-sdk:12.1.0'
+//    api 'com.applovin:applovin-sdk:12.6.1'
 
     // Cauly
 //    api 'com.google.android.gms:play-services-appset:16.0.0'
-//    api 'com.fsn.cauly:cauly-sdk:3.5.26'
+//    api 'com.fsn.cauly:cauly-sdk:3.5.31'
 
     // Mobon
-//    api('io.github.mobon:mobonSDK:1.0.0.54') {
+//    api('io.github.mobon:mobonSDK:1.0.0.65') {
 //        transitive = true
 //    }
 
     // UnityAds
-//    api 'com.unity3d.ads:unity-ads:4.7.0'
+//    api 'com.unity3d.ads:unity-ads:4.12.2'
 
 
-    // MezzoMedia. adMan.jar v200
-//    implementation files('libs/adMan_211115.jar')
+    // MezzoMedia. adMan.jar v300
+    //implementation files('libs/adman_240830.jar')
 
-    // Vungle( https://github.com/Vungle/Android-SDK/tree/6.11.0/app/libs )
+    // Vungle( https://github.com/Vungle/Android-SDK/tree/7.4.1/app/libs )
     // AAR Integration
-//    api 'com.vungle:publisher-sdk-android:6.11.0'
+    // api 'com.vungle:vungle-ads:7.4.1'
     api 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
 
 }

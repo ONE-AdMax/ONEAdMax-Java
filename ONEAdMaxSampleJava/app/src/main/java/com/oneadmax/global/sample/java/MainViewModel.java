@@ -24,6 +24,7 @@ public class MainViewModel extends ViewModel {
     public void initialize(@NonNull final Context context, @Nullable final IOAMInitListener listener) {
         if (!ONEAdMax.isInit(context)) {
             ONEAdMax.setLogEnable(true);
+            ONEAdMax.tagForChildDirectedTreatment(context, false);
             ONEAdMax.init(context, () -> {
                 if (listener != null) {
                     listener.onInitialized();

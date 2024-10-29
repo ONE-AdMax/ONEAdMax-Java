@@ -27,8 +27,6 @@
 
         <!-- ONEAdMax app key -->
         <meta-data android:name="com.oneadmax.global.appkey" android:value="938555472" />
-        <!-- AppLogin sdk key -->
-        <meta-data android:name="applovin.sdk.key" android:value="@string/applovin_sdk_key"  />
     </application>
 
 </manifest>
