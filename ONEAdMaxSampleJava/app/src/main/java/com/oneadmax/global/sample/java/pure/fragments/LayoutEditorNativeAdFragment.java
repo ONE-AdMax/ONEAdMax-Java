@@ -85,4 +85,7 @@ public class LayoutEditorNativeAdFragment extends BaseFragment<FragmentNativeLay
     public void onClicked() {
         addMethodName(null);
     }
+
+    @Override
+    public void onAdHidden() {addMethodName(null);}
 }

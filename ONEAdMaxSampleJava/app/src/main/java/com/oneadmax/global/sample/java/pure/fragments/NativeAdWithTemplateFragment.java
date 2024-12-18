@@ -96,5 +96,8 @@ public class NativeAdWithTemplateFragment extends BaseFragment<FragmentNativeTem
         public void onClicked() {
             Log.d(TAG, "onClicked: " + placementId);
         }
+
+        @Override
+        public void onAdHidden() {Log.d(TAG, "onAdHidden");}
     }
 }
