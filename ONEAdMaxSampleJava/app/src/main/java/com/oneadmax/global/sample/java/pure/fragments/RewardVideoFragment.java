@@ -135,7 +135,6 @@ public class RewardVideoFragment extends BaseFragment<FragmentFullScreenContentB
     @Override
     public void onCompleted(int adNetworkNo, boolean completed) {
         addMethodName("adNetworkNo: " + adNetworkNo + ", completed: " + completed);
-
     }
 
     /**

@@ -1,8 +1,8 @@
-# ONEAdMax SDK 1.2.1
+# ONEAdMax SDK 1.2.2
 
 ## Overview
 
-ONE Store AdMax SDK 1.2.1 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
+ONE Store AdMax SDK 1.2.2 is a service that delivers advertisements to users using the advertising system of ONE Store for products implemented in Android apps, and provides advertising revenue to developers. To bind this SDK, it is necessary to have products registered in the [ONE Store Developer Center](http://dev.onestore.co.kr/), and prior registration with [ONE AdMax](http://oneadmax.com) as a media platform is required.
 
 
 ## ONEAdMax SDK
@@ -19,13 +19,13 @@ repositories {
 
 Then, add Maven dependencies to the Module-level gradle.
 
-Please make sure to use the latest version, 1.2.1, to ensure compatibility with Android OS support and bug fixes.
+Please make sure to use the latest version, 1.2.2, to ensure compatibility with Android OS support and bug fixes.
 
 Verify the exact version of the **In-App SDK** or **App Licensing Checker SDK** to install the compatible version of the **ONE AdMax SDK**.
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.2.1'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.2'
 
     // Compatible in-app libraries on the ONEstore are listed below.
     // implementation 'com.onestorecorp.sdk:sdk-iap:21.01.00'
@@ -52,6 +52,10 @@ Need to add `<queries>` to your `Androidmanifest.xml` file.
 Refer to the[[SDK guide]](https://one-admax-organization.gitbook.io/one-admax-sdk/oamsdk)for more information
 
 ## Change Note
+* 2025-07-22
+    * Mediation compatibility update. 
+    * Removed AdFit mediation. 
+    * Code stabilization. 
 * 2024-12-18
 	* Fixed crash issue during AppLovin mediation initialization
 	* Ensured compatibility with AppLovin SDK version 13.0.1

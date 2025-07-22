@@ -86,6 +86,9 @@ public class LayoutEditorNativeAdFragment extends BaseFragment<FragmentNativeLay
         addMethodName(null);
     }
 
+    /**
+     * Called when the ad is Closed.
+     */
     @Override
     public void onAdHidden() {addMethodName(null);}
 }
